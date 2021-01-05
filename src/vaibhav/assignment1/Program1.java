@@ -34,7 +34,7 @@ public class Program1 {
 	    driver.get("https://www.gmail.com");
 	    driver.get("https://www.google.com");
 	    driver.quit();
-	    System.out.print("Done");
+	    System.out.print("TC passed");
 	}
 
 }
