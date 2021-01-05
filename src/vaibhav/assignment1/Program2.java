@@ -22,7 +22,7 @@ public class Program2 {
 		driver.navigate().refresh();
 		System.out.println("page is refreshing");
 		driver.navigate().back();
-		System.out.println("back is working fine");
+		System.out.println("back is working fine absoutely");
 		
 		
 	}
