@@ -13,8 +13,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Browser_Cmd {
 
 	public static void main(String[] args) {
-
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		String path="C:\\TechnoCredids\\Selenium_Practice\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://unifiedportal-emp.epfindia.gov.in/epfo/");
 		System.out.println("EPFO website open successfully");

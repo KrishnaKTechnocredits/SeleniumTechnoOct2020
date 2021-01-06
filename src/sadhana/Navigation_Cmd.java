@@ -9,7 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class Navigation_Cmd { 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		String path="C:\\TechnoCredids\\Selenium_Practice\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
 		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("https://www.epfindia.gov.in/site_en/");
 		
