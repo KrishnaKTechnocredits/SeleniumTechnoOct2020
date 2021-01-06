@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FacebookLogin {
 
-	static public void Login() {
+	static public void Login() throws InterruptedException {
 		String path = "./resources/windows/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", path);
 		WebDriver driver = new ChromeDriver();
@@ -16,18 +16,21 @@ public class FacebookLogin {
 		System.out.println("Enter user name");
 		driver.findElement(By.xpath("//*[@name = 'email']")).sendKeys("prasad.chitale@gmail.com");
 		System.out.println("Enter password");
-		driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("Amara@2020");
+		driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("******");
 		System.out.println("Step:Click on login button");
 		driver.findElement(By.xpath("//button[@name='login']")).click();
+		Thread.sleep(5000);
 		String tabName = driver.getTitle();
 		
-		if(tabName.equals("Facebook"))
+		if(tabName.equals("Facebook")) {
 			System.out.println("User is logged in successfully");
-		else 
+		}
+		else {
 			System.out.println("User login failed");
+		}
 	}
 
-	public static void main(String[] arg) {
+	public static void main(String[] arg) throws InterruptedException {
 		FacebookLogin.Login();
 	}
 }
