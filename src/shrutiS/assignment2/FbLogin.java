@@ -16,7 +16,7 @@ public class FbLogin {
 		
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("7020383787");
 		System.out.println("Step2: MobileNo or Email id entered");
-		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("Nalini-4591");
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("*******");
 		System.out.println("Step3: Password entered");
 		driver.findElement(By.xpath("//button[@name='login']")).click();
 		System.out.println("Step4: Login button is clicked");
