@@ -37,8 +37,10 @@ public class BasicElementsAlert2 {
 			System.out.println("Step: Clicking on Basic Elements link");
 			driver.findElement(By.linkText("Basic Elements")).click();
 			
+			Thread.sleep(1000);
+			js.executeScript("window.scrollBy(0,200)");
+
 			System.out.println("Step: Click on Alert");
-			js.executeScript("window.scrollBy(0,100)");
 			driver.findElement(By.id("javascriptAlert")).click();
 			Alert alert = driver.switchTo().alert();
 			System.out.println("Step: Validate alert text");

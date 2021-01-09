@@ -54,9 +54,9 @@ public class Login {
 			else {
 				System.out.println("Step: Validating first user, username: mkanani, password: mk123");
 				validateLogin("mkanani", "mk123", "Failed! please enter strong password");
-				System.out.println("Step: Validating second user, username: maulik.kanani, password: hjp123");
+				System.out.println("\nStep: Validating second user, username: maulik.kanani, password: hjp123");
 				validateLogin("maulik.kanani", "hjp123", "Failed! please enter strong password");
-				System.out.println("Step: Validating second user, username: mkanani, password: mk12312312");
+				System.out.println("\nStep: Validating second user, username: mkanani, password: mk12312312");
 				validateLogin("mkanani", "mk12312312", "Success!");
 			}
 		} catch (Exception e) {
