@@ -1,5 +1,7 @@
 package brijesh.assignments.assignment3;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +21,7 @@ public class BasicElementsAlert {
 		driver = new ChromeDriver();
 		driver.get("http://automationbykrishna.com/");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("AutomationByKrishna website open successfully.");
 		return driver;
 	}
@@ -28,7 +31,6 @@ public class BasicElementsAlert {
 			start();
 			System.out.println("Step: Clicking on Basic Elements link");
 			driver.findElement(By.linkText("Basic Elements")).click();
-			Thread.sleep(1000);
 			String firstName = "Brijesh";
 			String lastName = "Gajera";
 			String companyName = "Company1";

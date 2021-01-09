@@ -1,5 +1,7 @@
 package brijesh.assignments.assignment3;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +20,7 @@ public class Login {
 		driver = new ChromeDriver();
 		driver.get("http://automationbykrishna.com/");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("AutomationByKrishna website open successfully.");
 		return driver;
 	}
@@ -46,7 +49,6 @@ public class Login {
 			start();
 			System.out.println("Step: Clicking on registration link");
 			driver.findElement(By.linkText("Registration")).click();
-			Thread.sleep(1000);
 			if (!driver.findElement(By.xpath("//h1[@class='sign-title' and contains(text(),'Login')]")).isDisplayed())
 				System.out.println("Login page not visible");
 			else {

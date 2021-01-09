@@ -1,5 +1,7 @@
 package brijesh.assignments.assignment3;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -23,6 +25,7 @@ public class BasicElementsAlert2 {
 		driver = new ChromeDriver();
 		driver.get("http://automationbykrishna.com/");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("AutomationByKrishna website open successfully.");
 		return driver;
 	}
@@ -33,7 +36,6 @@ public class BasicElementsAlert2 {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			System.out.println("Step: Clicking on Basic Elements link");
 			driver.findElement(By.linkText("Basic Elements")).click();
-			Thread.sleep(1000);
 			
 			System.out.println("Step: Click on Alert");
 			js.executeScript("window.scrollBy(0,100)");
@@ -45,7 +47,6 @@ public class BasicElementsAlert2 {
 			else
 				System.err.println("Test Failed");
 			alert.accept();
-			Thread.sleep(2000);
 		
 			System.out.println("\nStep: Click on Java Script ConfirmationBox");
 			driver.findElement(By.id("javascriptConfirmBox")).click();
@@ -57,7 +58,6 @@ public class BasicElementsAlert2 {
 				System.out.println("Test Passed");
 			else
 				System.out.println("Test Failed");
-			Thread.sleep(2000);
 			
 			System.out.println("\nStep: Click on Java Script Prompt");
 			driver.findElement(By.id("javascriptPromp")).click();
