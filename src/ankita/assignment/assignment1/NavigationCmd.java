@@ -44,7 +44,7 @@ public class NavigationCmd {
 		else
 			System.out.println("Refreshed not validated");
 
-		driver.quit();
+		driver.close();
 
 	}
 }
