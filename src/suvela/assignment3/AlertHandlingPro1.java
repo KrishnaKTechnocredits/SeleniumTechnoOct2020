@@ -15,17 +15,17 @@ public class AlertHandlingPro1 {
 		driver.manage().window().maximize();
 	}
 
-	public void alert() throws Exception {
+	public void alert(String username, String pwd1, String pwd2) throws Exception {
 		Thread.sleep(1000);
 		System.out.println("Click on registration tab");
 		driver.findElement(By.xpath("//a[@id='registration2']")).click();
 		Thread.sleep(1000);
 		
 		System.out.println("Enter Username");
-		driver.findElement(By.xpath("//input[@id='unameSignin']")).sendKeys("Suvela K");
+		driver.findElement(By.xpath("//input[@id='unameSignin']")).sendKeys();
 		
 		System.out.println("Enter password");
-		driver.findElement(By.xpath("//input[@id='pwdSignin']")).sendKeys("123");
+		driver.findElement(By.xpath("//input[@id='pwdSignin']")).sendKeys();
 		
 		System.out.println("Click on login");
 		driver.findElement(By.xpath("//button[@id='btnsubmitdetails']")).click();
@@ -41,7 +41,7 @@ public class AlertHandlingPro1 {
 		driver.findElement(By.xpath("//input[@id='pwdSignin']")).clear();
 		Thread.sleep(100);
 		System.out.println("ReEnter strong password");
-		driver.findElement(By.xpath("//input[@id='pwdSignin']")).sendKeys("12312345asd");
+		driver.findElement(By.xpath("//input[@id='pwdSignin']")).sendKeys();
 		
 		System.out.println(" Again Click on login");
 		driver.findElement(By.xpath("//button[@id='btnsubmitdetails']")).click();
@@ -55,7 +55,10 @@ public class AlertHandlingPro1 {
 
 	public static void main(String[] args) throws Exception {
 		new AlertHandlingPro1().start();
-		new AlertHandlingPro1().alert();
+		String uname="Suvela K";
+		String pwd1="123";
+		String pwd2="12312345asd";
+		new AlertHandlingPro1().alert(uname,pwd1,pwd2);
 
 	}
 

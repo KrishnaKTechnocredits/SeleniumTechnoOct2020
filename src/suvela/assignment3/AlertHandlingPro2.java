@@ -16,7 +16,7 @@ public class AlertHandlingPro2 {
 		driver.manage().window().maximize();
 	}
 
-	public void alertButton() throws Exception {
+	public void alertButton(String alertmsg) throws Exception {
 		System.out.println("Alert type 1");
 		Thread.sleep(1000);
 		System.out.println("click on basic elements tab");
@@ -27,7 +27,6 @@ public class AlertHandlingPro2 {
 		jse.executeScript("arguments[0].click()", driver.findElement(By.xpath("//button[@id='javascriptAlert']")));;
 		Thread.sleep(1000);
 
-		String alertmsg = "You must be TechnoCredits student!!";
 		String expectedmsg = driver.switchTo().alert().getText();
 		if (alertmsg.equals(expectedmsg))
 			System.out.println("Alert generated with:" + expectedmsg);
@@ -35,7 +34,7 @@ public class AlertHandlingPro2 {
 		// driver.close();
 	}
 
-	public void confirmationBox() throws Exception {
+	public void confirmationBox(String msg) throws Exception {
 		System.out.println("Alert type 2");
 		Thread.sleep(1000);
 		System.out.println("click on basic elements tab");
@@ -50,7 +49,7 @@ public class AlertHandlingPro2 {
 		driver.switchTo().alert().accept();
 		;
 
-		String msg = "You pressed OK!";
+		
 		String labelmsg = driver.findElement(By.xpath("//p[@id='pgraphdemo']")).getText();
 		if (labelmsg.equals(msg))
 			System.out.println("Alert has been accepted");
@@ -60,7 +59,7 @@ public class AlertHandlingPro2 {
 
 	}
 
-	public void promt() throws Exception {
+	public void promt(String name,String actualmsg) throws Exception {
 		System.out.println("Alert type 3");
 		Thread.sleep(1000);
 		System.out.println("click on basic elements tab");
@@ -72,10 +71,10 @@ public class AlertHandlingPro2 {
 		jse.executeScript("arguments[0].click()", driver.findElement(By.xpath("//button[@id='javascriptPromp']")));
 		Thread.sleep(1000);
 
-		String name = "Suvela";
+		
 		driver.switchTo().alert().sendKeys(name);
 		driver.switchTo().alert().accept();
-		String actualmsg = "Hello " + name + "!" + " How are you today?";
+		
 		String labelmsg = driver.findElement(By.xpath("//p[@id='pgraphdemo']")).getText();
 		if (actualmsg.equals(labelmsg))
 			System.out.println("Alert has been accepted");
@@ -86,9 +85,15 @@ public class AlertHandlingPro2 {
 
 	public static void main(String[] args) throws Exception {
 		new AlertHandlingPro2().start();
-		new AlertHandlingPro2().alertButton();
-		new AlertHandlingPro2().confirmationBox();
-		new AlertHandlingPro2().promt();
+		String alertmsg = "You must be TechnoCredits student!!";
+		new AlertHandlingPro2().alertButton(alertmsg);
+		
+		String msg = "You pressed OK!";
+		new AlertHandlingPro2().confirmationBox(msg);
+		
+		String name = "Suvela";
+		String actualmsg = "Hello " + name + "!" + " How are you today?";
+		new AlertHandlingPro2().promt(name,actualmsg);
 	}
 
 }

@@ -14,19 +14,19 @@ public class AlertHandlingPro3 {
 		driver.get("http://automationbykrishna.com");
 		driver.manage().window().maximize();
 	}
-	public void verifyForm() throws Exception {
+	public void verifyForm(String fname, String lname,String company) throws Exception {
 		System.out.println("click on basic elements tab");
 		driver.findElement(By.xpath("//a[@id='basicelements']")).click();
 		Thread.sleep(1000);
 		
 		System.out.println("Enter first name");
-		String fname="Suvela";
+		
 		driver.findElement(By.xpath("//input[@name='ufname']")).sendKeys(fname);
 		System.out.println("Enter last name");
-		String lname="Khaladkar";
+		
 		driver.findElement(By.xpath("//input[@name='ulname']")).sendKeys(lname);
 		System.out.println("Enter company name");
-		String company="ABC";
+		
 		driver.findElement(By.xpath("//input[@name='cmpname']")).sendKeys(company);
 		
 		System.out.println("Hit submit");
@@ -43,7 +43,10 @@ public class AlertHandlingPro3 {
 	}
 	public static void main(String[] args) throws Exception {
 		new AlertHandlingPro3().start();
-		new AlertHandlingPro3().verifyForm();
+		String fname="Suvela";
+		String lname="Khaladkar";
+		String company="ABC";
+		new AlertHandlingPro3().verifyForm(fname,lname,company);
 
 	}
 
