@@ -26,11 +26,11 @@ public class AlertPageAutomate {
 		Thread.sleep(5000);
 
 		driver.findElement(By.id("unameSignin")).sendKeys(userName);
-		System.out.println("UserName entered");
+		System.out.println("UserName entered:" +userName);
 		Thread.sleep(5000);
 
 		driver.findElement(By.id("pwdSignin")).sendKeys(Password);
-		System.out.println("Passwrd entered");
+		System.out.println("Passwrd entered: " +Password);
 
 		driver.findElement(By.id("btnsubmitdetails")).click();
 
