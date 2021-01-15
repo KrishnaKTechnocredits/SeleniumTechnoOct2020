@@ -2,6 +2,7 @@ package raghvendra;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -24,6 +25,8 @@ public class ScrollWithMultiselect {
 		System.out.println("Step2 : navigate to Basic Elements");
 		driver.findElement(By.xpath("//a[contains(@id,'basic')]")).click();
 		WebElement dropdown=driver.findElement(By.xpath("//select[@class='form-control']"));
+		JavascriptExecutor je=(JavascriptExecutor)driver;
+		je.executeScript("arguments[0].scrollIntoView(true)", dropdown);
 		Select select=new Select(dropdown);
 		System.out.println("Step3 : Select 1 and 3 value in a multi select dropdown");
 		select.selectByVisibleText(select1);
