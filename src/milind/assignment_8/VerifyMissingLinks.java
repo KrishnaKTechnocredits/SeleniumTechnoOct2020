@@ -3,6 +3,7 @@ package milind.assignment_8;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,9 +28,21 @@ public class VerifyMissingLinks {
 		}
 	}
 	
+	void multiWindowHandle() throws IOException {
+		driver = PredefinedActions.start("https:\\www.naukri.com");
+		Set<String> listOfWindowID = driver.getWindowHandles();
+		for(String windowID : listOfWindowID) {
+			String windowTitle = driver.switchTo().window(windowID).getTitle();
+			if(!(windowTitle.contains("Jobs - Recruitment"))) {
+				driver.close();
+			}
+		}
+	}
+	
 	public static void main(String[] args) throws IOException {
 		VerifyMissingLinks verifyMissingLinks = new VerifyMissingLinks();
 		verifyMissingLinks.missingLinks();
 		verifyMissingLinks.driver.close();
+		verifyMissingLinks.multiWindowHandle();
 	}
 }
