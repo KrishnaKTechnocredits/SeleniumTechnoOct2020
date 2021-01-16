@@ -25,4 +25,20 @@ public class PredefinedActions {
 		driver.manage().window().maximize();
 		return driver;
 	}
+	
+	static WebDriver start(String url) throws IOException {
+		System.out.println("STEP : Launch chrome browser");
+		System.setProperty(ConstantPath.chromeDriverKey,ConstantPath.chromeDriverPath);
+		WebDriver driver = new ChromeDriver();
+		System.out.println("STEP : Read URL from property file");
+		File file = new File("D:\\Technocredits\\eclipseProject\\Oct2020\\SeleniumTechnoOct2020\\src\\milind\\assignment_8\\conData.properties");
+		FileInputStream fis = new FileInputStream(file);
+		Properties prop = new Properties();
+		prop.load(fis);
+		System.out.println("STEP : Open "+ url +" URL");
+		driver.get(url);
+		System.out.println("STEP : Maximize Browser");
+		driver.manage().window().maximize();
+		return driver;
+	}
 }
