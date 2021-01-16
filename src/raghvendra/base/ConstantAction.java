@@ -13,7 +13,6 @@ public class ConstantAction {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	
 	public static WebDriver url() {
 		return start("http://automationbykrishna.com/");
 	}
