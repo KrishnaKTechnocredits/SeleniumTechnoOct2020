@@ -6,10 +6,8 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
-import brijesh.assignments.base.Driver;
-import brijesh.assignments.base.*;
+import brijesh.base.Driver;
 
 /*
 1. Print missing link button text
