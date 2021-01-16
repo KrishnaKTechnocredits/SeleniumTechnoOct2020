@@ -1,6 +1,7 @@
 package raghvendra.base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 public class ConstantAction {
 	public static WebDriver start(String url) {
 		System.setProperty(Path.chromeDriver,Path.chromeDriverPath);
@@ -12,7 +13,6 @@ public class ConstantAction {
 		driver.manage().window().maximize();
 		return driver;
 	}
-
 	public static WebDriver url() {
 		return start("http://automationbykrishna.com/");
 	}
