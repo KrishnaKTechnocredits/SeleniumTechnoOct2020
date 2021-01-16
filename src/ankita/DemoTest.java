@@ -13,7 +13,7 @@ public class DemoTest {
 
 		System.setProperty("webdriver.chrome.driver", path);
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://automationbykrishna.com/");
+		driver.get("wwww.automationbykrishna.com/");
 		System.out.println("AutomationByKrishna website open successfully.");
 		//driver.quit();
 	}
