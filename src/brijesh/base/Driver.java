@@ -1,4 +1,4 @@
-package brijesh.assignments.base;
+package brijesh.base;
 
 import java.util.concurrent.TimeUnit;
 
