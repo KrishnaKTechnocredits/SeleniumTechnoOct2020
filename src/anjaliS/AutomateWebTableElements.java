@@ -27,12 +27,16 @@ public class AutomateWebTableElements {
 		driver.findElement(By.id("demotable")).click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		List<WebElement> Elements = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
-		for (WebElement element : Elements) {
+		List<WebElement> elements = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
+		for (int index = 1; index <= elements.size(); index++) {
 
-			String userName = element.findElement(By.xpath("./td[4]")).getText();
-			String firstName = element.findElement(By.xpath("./td[2]")).getText();
-			String lastName = element.findElement(By.xpath("./td[3]")).getText();
+			String firstName = driver.findElement(By.xpath("//table[@id='table1']/tbody/tr[" + index + "]/td[2]"))
+					.getText();
+			String lastName = driver.findElement(By.xpath("//table[@id='table1']/tbody/tr[" + index + "]/td[3]"))
+					.getText();
+			String userName = driver.findElement(By.xpath("//table[@id='table1']/tbody/tr[" + index + "]/td[4]"))
+					.getText();
+
 			Boolean userNameCondition = (firstName.toLowerCase().charAt(0) + lastName.toLowerCase()).equals(userName);
 
 			if (userNameCondition)
