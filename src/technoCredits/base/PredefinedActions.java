@@ -18,7 +18,4 @@ public class PredefinedActions {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	
-	
-	
 }
