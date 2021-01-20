@@ -18,11 +18,11 @@ import org.openqa.selenium.interactions.Actions;
 
 import deepak.methods.UtilityMethods;
 
-public class MouseEventsHandeling {
+public class DoubleClick {
 	
 	static WebDriver driver;
 	
-	public static void DoubleClick() throws InterruptedException {
+	public static void DoubleClickDemo() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	
@@ -63,10 +63,7 @@ public class MouseEventsHandeling {
 	public static void main(String[] args) throws InterruptedException {
 		
 		driver = UtilityMethods.start();
-		//DoubleClick();
-		
+		DoubleClickDemo();
 		driver.close();
-		
 	}
-
 }
