@@ -11,18 +11,6 @@ public class CodingExam1 {
 	char fch;
 	int count;
 
-	char firstChar(String fname) {
-		char ch = '*';
-		for (int i = 0; i < fname.length(); i++) {
-			if (i == 0) {
-				ch = fname.charAt(i);
-				break;
-			}
-		}
-
-		return ch;
-	}
-
 	void validateID(WebDriver driver) {
 		driver.findElement(By.linkText("Demo Tables")).click();
 		List<WebElement> columns = driver.findElements(By.xpath("//table[@id= 'table1']/thead/tr/th"));
@@ -36,7 +24,7 @@ public class CodingExam1 {
 
 				if (colIndex == 2) {
 					fname = element.getText();
-					fch = firstChar(fname);
+					fch = fname.charAt(0);
 				} else if (colIndex == 3) {
 					lName = element.getText();
 				} else if (colIndex == 4) {
