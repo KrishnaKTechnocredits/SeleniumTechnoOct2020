@@ -29,45 +29,39 @@ public class EnableDisable {
 		System.out.println("First scenario checked");
 	}
 
-	void isEnableDisable() {
+	void isEnableDisable() throws InterruptedException {
 		System.out.println("Check whether enabled & disabled button is disabled or not");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if (!driver.findElement(By.id("myText")).isEnabled())
 			System.out.println("Button is disabled");
 		else
-			System.out.println("Button is not enabled");
+			System.out.println("Button is enabled");
 
 		System.out.println("Click on enable & disable button");
 		driver.findElement(By.xpath("//button[@onclick = 'myFunction()']")).click();
+
+		System.out.println("If textbox is enabled, try to call sendkeys method and verify behavior");
+		driver.findElement(By.id("myText")).sendKeys("Anjali");
+		System.out.println(
+				"Second Scenario checked: User is able to enter text in name field incase - enable and disable button is enabled");
+
+		Thread.sleep(3000);
+		System.out.println("Click on enable & disable button");
+		driver.findElement(By.xpath("//button[@onclick = 'myFunction()']")).click();
+
 		System.out.println("If textbox is disabled, try to call sendkeys method and verify behavior");
+		driver.findElement(By.id("myText")).sendKeys("Khushbu");
 
-		try {
-			driver.findElement(By.id("myText")).sendKeys("Anjali");
-		} catch (Exception e) {
-			System.out.println("Text field is disabled,will not allow to enter anything");
-		} finally {
-			System.out.println("Second scenario checked");
-		}
-		String name = "Anjali";
-		System.out.println("Click on enable and disable button");
-		driver.findElement(By.xpath("//button[@onclick = 'myFunction()']")).click();
-
-		System.out.println("Enter name in Name field");
-		driver.findElement(By.id("myText")).sendKeys(name);
-
-		System.out.println("Check:In case of disable button,system is able to send value");
-		driver.findElement(By.xpath("//button[@onclick = 'myFunction()']")).click();
-
-		String newName = driver.findElement(By.xpath("//input[@id='myText']")).getAttribute("value");
-		if (!newName.equals(name))System.out.println("System is allowing user to enter value in case of button is disabled");
+		System.out.println(
+				"Second Scenario checked: User is able to enter text in name field incase - enable and disable button is disbaled");
 
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		driver = Driver.start();
 		EnableDisable ed = new EnableDisable();
 		ed.isElementVisible();
 		ed.isEnableDisable();
-		//driver.close();
+
 	}
 }
