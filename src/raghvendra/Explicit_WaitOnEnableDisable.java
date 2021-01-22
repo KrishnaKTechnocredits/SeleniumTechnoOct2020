@@ -4,7 +4,6 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import raghvendra.base.ConstantAction;
 
 /*Assignment 14
@@ -26,7 +25,6 @@ Script 2: check element's visibility using explicit wait
 		}
 
 		driver.findElement(By.xpath("//button[@onclick='myFunction()']")).click();
-		//WebElement element=driver.findElement(By.xpath("//button[@onclick='myFunction()']"));
 		try {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='myDIV']")));
 		}
