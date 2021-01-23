@@ -24,7 +24,7 @@ e) Validate Reset functionality of form.
 	1. Type something in 'First Name'. Validate text of this field.
 	2. Click on 'Reset form in same tab' button.
 	3. Validate text of 'First Name' field again. It should be empty or null.*/
-package suvela.assignment4;
+package suvela.Assignment4;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

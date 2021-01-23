@@ -58,7 +58,7 @@ ans : 20205 -> 4 [Map , find max key]
 hint : String str = "Hi Hello Hi Hi Techno Hi Hello Hi"	
 */
 
-package suvela.assignment11;
+package suvela.Assignment11;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;

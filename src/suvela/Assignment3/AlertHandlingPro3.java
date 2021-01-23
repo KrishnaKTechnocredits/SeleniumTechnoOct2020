@@ -1,4 +1,4 @@
-package suvela.assignment3;
+package suvela.Assignment3;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
