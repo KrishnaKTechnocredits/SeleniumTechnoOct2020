@@ -2,7 +2,7 @@
 Program 1 : a) fillup the form "First_Form_4" by taking data from properties file
             b) click on "Go and Practice", validate user should navigate to AutomationBykrishna.com
             c) go back in the history, verify firstname field contains the same value which is provided from properties file.*/
-package suvela.assignment6;
+package suvela.Assignment6;
 
 import java.io.File;
 import java.io.FileInputStream;

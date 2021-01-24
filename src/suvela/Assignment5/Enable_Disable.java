@@ -1,4 +1,4 @@
-package suvela.assignment5;
+package suvela.Assignment5;
 
 import java.util.concurrent.TimeUnit;
 

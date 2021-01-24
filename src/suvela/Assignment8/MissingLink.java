@@ -1,4 +1,4 @@
-package suvela.assign8;
+package suvela.Assignment8;
 
 import java.util.List;
 
