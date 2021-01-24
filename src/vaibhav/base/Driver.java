@@ -7,12 +7,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Driver {
 
-	private static WebDriver driver;
-
-	public static WebDriver start(String url) {
+		public static WebDriver start(String url) {
 		String path = "./resources/windows/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", path);
-		driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.get(url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -20,8 +18,8 @@ public class Driver {
 		return driver;
 	}
 	
-	public static void start() {
-		start("http://automationbykrishna.com/");	
+	public static WebDriver start() {
+		return start("http://automationbykrishna.com/");	
 	}
 
 }
