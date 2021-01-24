@@ -2,7 +2,6 @@ package technoCredits.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import technoCredits.ConstantPath;
 
 public class PredefinedActions {
