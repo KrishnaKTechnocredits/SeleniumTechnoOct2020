@@ -23,7 +23,8 @@ public class FacebookLogin {
 		System.out.println("STEP : Enter username");
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("9011595072");
 		System.out.println("STEP : Enter password");
-		driver.findElement(By.id("pass")).sendKeys("samosabag123!");
+		driver.findElement(By.id("pass")).sendKeys("*************");
+		
 		Thread.sleep(2000);
 
 		System.out.println("STEP : Click on login button");

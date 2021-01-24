@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Driver {
 
-	public static WebDriver start(String url) {
+		public static WebDriver start(String url) {
 		String path = "./resources/windows/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", path);
 		WebDriver driver = new ChromeDriver();
@@ -19,7 +19,7 @@ public class Driver {
 	}
 	
 	public static WebDriver start() {
-		return start("http://automationbykrishna.com/");		  
+		return start("http://automationbykrishna.com/");	
 	}
 
 }
