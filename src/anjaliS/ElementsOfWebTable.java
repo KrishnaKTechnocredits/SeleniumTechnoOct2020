@@ -61,5 +61,4 @@ public class ElementsOfWebTable {
 		ele.start();
 		ele.findElementsFromTable();
 	}
-
 }
