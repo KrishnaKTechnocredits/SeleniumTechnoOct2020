@@ -29,5 +29,13 @@
 	<classpathentry kind="lib" path="libs/poi-4.1.2/poi-scratchpad-4.1.2.jar"/>
 	<classpathentry kind="lib" path="libs/poi-4.1.2/SparseBitSet-1.2.jar"/>
 	<classpathentry kind="lib" path="libs/poi-4.1.2/xmlbeans-3.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/guava-base-r03.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/guava-collections-r03.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/jcommander.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/snakeyaml.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/testng-remote.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/testng-sources.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/testng.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
