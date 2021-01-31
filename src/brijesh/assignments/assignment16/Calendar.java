@@ -75,7 +75,7 @@ public class Calendar {
 		
 		System.out.println("Step: validate selected departure date");
 		String departureSelectedValue = departure.getAttribute("value");
-		softAssert.assertTrue(departureSelectedValue.contains(departureText[0]) && departureSelectedValue.contains("14 Feb"));
+		softAssert.assertTrue(departureSelectedValue.contains(departureText[0]) && departureSelectedValue.contains("14 Feb"), "Invalid selected departure date");
 	
 		System.out.println("Step: click on Return datepicker");
 		WebElement returnElement = driver.findElement(By.id("returnCalendar"));
@@ -88,7 +88,7 @@ public class Calendar {
 		
 		System.out.println("Step: validate selected return date");
 		String returnSelectedValue = returnElement.getAttribute("value");
-		softAssert.assertTrue(returnSelectedValue.contains(returnText[0]) && returnSelectedValue.contains("15 Feb"));
+		softAssert.assertTrue(returnSelectedValue.contains(returnText[0]) && returnSelectedValue.contains("15 Feb"), "Invalid selected return date");
 		
 		softAssert.assertAll();
 	}
