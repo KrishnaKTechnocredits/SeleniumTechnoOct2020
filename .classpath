@@ -36,6 +36,6 @@
 	<classpathentry kind="lib" path="libs/TestNG/snakeyaml.jar"/>
 	<classpathentry kind="lib" path="libs/TestNG/testng-remote.jar"/>
 	<classpathentry kind="lib" path="libs/TestNG/testng-sources.jar"/>
-	<classpathentry kind="lib" path="libs/TestNG/testng.jar"/>
+	<classpathentry kind="lib" path="libs/TestNG/testng.jar" sourcepath="D:/TechnoCredits/Software/libs/testng-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
