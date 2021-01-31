@@ -27,12 +27,17 @@ public class ValidateCalendar {
 	WebDriver driver=ConstantAction.start("https://www.goibibo.com/");
 	@Test
 	void checkCalendar() {
+		String day,month, year="";
 		System.out.println("Step 1-Open goibibo Website");
 		driver.findElement(By.cssSelector("#departureCalendar")).click();
 		System.out.println("Step 2-Click on Departure");
 		DateFormat dateFormat = new SimpleDateFormat("MMM dd yyyy");
 		Date date = new Date();
 		String dateFormatted= dateFormat.format(date);
+		String[] arrayOfDate=dateFormatted.split(" ");
+		day=arrayOfDate[1];
+		month=arrayOfDate[0];
+		year=arrayOfDate[2];
 		System.out.println("Print Today;s date:"+dateFormatted);
 		System.out.println("Get selected date");
 		String selectedDate=driver.findElement(By.xpath(".//div[contains(@class,'today')] [@aria-selected='true']")).getAttribute("aria-label");
@@ -43,15 +48,16 @@ public class ValidateCalendar {
 		System.out.println("Verify all Past dates are disabled");
 		List<WebElement> listOfeElements=driver.findElements(By.xpath(".//div[contains(@aria-label,'Jan')] [@aria-disabled='true'] [@aria-selected='false']"));
 		for(WebElement element:listOfeElements) {
-			if(!element.getAttribute("aria-disabled").equals("true")) {
+			String currentDay=element.getAttribute("aria-label").substring(8,10);
+			if((Integer.parseInt(day)<Integer.parseInt(currentDay)) || element.getAttribute("aria-disabled").equals("false")) {
 				System.out.println("Date is not disabled:"+element.getAttribute("aria-label"));
 			}
 		}
-			
 		System.out.println("Verify all future dates are enabled");
 		listOfeElements=driver.findElements(By.xpath(".//div[contains(@aria-label,'Jan')] [@aria-disabled='false'] [@aria-selected='false']"));
 		for(WebElement element:listOfeElements) {
-			if(element.getAttribute("aria-disabled").equals("true")) {
+			String currentDay=element.getAttribute("aria-label").substring(8,10);
+			if(Integer.parseInt(currentDay)>(Integer.parseInt(day))&& element.getAttribute("aria-disabled").equals("true")) {
 				System.out.println("Date is enabled:"+element.getAttribute("aria-label"));
 			}
 		}
@@ -65,13 +71,15 @@ public class ValidateCalendar {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@id='departureCalendar']"))));
 		String dateFrom=driver.findElement(By.xpath("//input[@id='departureCalendar']")).getAttribute("value");
 		System.out.println("Validate selected date and day");
-		Assert.assertEquals("Sun, 14 Feb", dateFrom); //Used hardcoded Deparure date values which can be replaced
+		Assert.assertEquals("Sun, 14 Feb", dateFrom); 
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[contains(@id,'returnCalendar')]"))));
 		driver.findElement(By.xpath("//input[contains(@id,'returnCalendar')]")).click();
 		System.out.println("Click on Return date");
 		driver.findElement(By.xpath("//div[contains(@id,'fare_20210215')]")).click();
 		String dateTo=driver.findElement(By.xpath("//input[@id='returnCalendar']")).getAttribute("value");
 		System.out.println("Validate Return date and day");
-		Assert.assertEquals("Mon, 15 Feb", dateTo);  //Used hardcoded Return date values which can be replaced
+		Assert.assertEquals("Mon, 15 Feb", dateTo);  
+		System.out.println("Closing Window");
+		driver.close();
 	}
 }
