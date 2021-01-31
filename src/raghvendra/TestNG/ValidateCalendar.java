@@ -65,13 +65,13 @@ public class ValidateCalendar {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@id='departureCalendar']"))));
 		String dateFrom=driver.findElement(By.xpath("//input[@id='departureCalendar']")).getAttribute("value");
 		System.out.println("Validate selected date and day");
-		Assert.assertEquals("Sun, 14 Feb", dateFrom);
+		Assert.assertEquals("Sun, 14 Feb", dateFrom); //Used hardcoded Deparure date values which can be replaced
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[contains(@id,'returnCalendar')]"))));
 		driver.findElement(By.xpath("//input[contains(@id,'returnCalendar')]")).click();
 		System.out.println("Click on Return date");
 		driver.findElement(By.xpath("//div[contains(@id,'fare_20210215')]")).click();
 		String dateTo=driver.findElement(By.xpath("//input[@id='returnCalendar']")).getAttribute("value");
 		System.out.println("Validate Return date and day");
-		Assert.assertEquals("Mon, 15 Feb", dateTo);
+		Assert.assertEquals("Mon, 15 Feb", dateTo);  //Used hardcoded Return date values which can be replaced
 	}
 }
