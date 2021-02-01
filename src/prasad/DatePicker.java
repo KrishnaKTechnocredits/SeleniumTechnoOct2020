@@ -32,7 +32,8 @@ public class DatePicker {
 	boolean flag;
 	String expectedFromCity = "Mumbai";
 	String destinationCity = "Vancouver";
-
+	
+		
 	@Test
 	void selectTravelDates() throws InterruptedException {
 		driver = StaticResources.start("https://goibibo.com");
@@ -90,6 +91,8 @@ public class DatePicker {
 		// Spliting date to get YYYY,MM,DD
 		String dateSplit[] = todayDate.split("-");
 		String day = dateSplit[2];
+		String year = dateSplit[0];
+		String month = dateSplit[1];
 
 		System.out.println("Step 6: Validate today's date is pre-selected on the date picker");
 		WebElement element = driver.findElement(
@@ -121,7 +124,7 @@ public class DatePicker {
 		noOfDaysInMonth.put(12, 31);
 
 		// validating if calender is displaying correct number of days for given month
-		String month = dateSplit[1];
+		
 		// converting month of captured today's date into Integer for comparision
 		int monthInt = Integer.parseInt(month);
 		int expectedNoOfDays = noOfDaysInMonth.get(monthInt);
@@ -136,6 +139,8 @@ public class DatePicker {
 		System.out.println("Step 8: Validate all past dates are disabled");
 		// converting day of captured today's date into Integer so be used as index
 		int dayInt = Integer.parseInt(day);
+		//If selected day is 1st day of month
+		if(dayInt!=1) {
 		for (int index = dayInt; index <= 1; index--) {
 			WebElement dayElement = days.get(index);
 			String isDisabled = dayElement.getAttribute("aria-disabled");
@@ -143,6 +148,9 @@ public class DatePicker {
 		}
 		softassert.assertAll();
 		System.out.println("All past dates are disabled");
+		}
+		else 
+			System.out.println("No past dates to validate");
 		System.out.println("Step 9: Validate all future dates are selectable");
 		int index = dayInt;
 		while (index <= actualNoOfDays - 1) {
@@ -162,10 +170,9 @@ public class DatePicker {
 			System.out.println("Next button is present");
 		button.click();
 		System.out.println("Step 11: Select departure date = 14th");
-		String year = dateSplit[0];
 		WebDriverWait waitFrDate = new WebDriverWait(driver, 3);
 
-		waitFrDate.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='fare_20210214']"))).click();
+		waitFrDate.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class = 'calDate'][text()='14']"))).click();
 		System.out.println("Step 12: Validate selected date and day in departure date field");
 		WebElement dateDay = driver.findElement(By.xpath("//input[@id='departureCalendar']"));
 		String dateDayValue = dateDay.getAttribute("value");
@@ -173,7 +180,7 @@ public class DatePicker {
 
 		System.out.println("Step 13: Select return date = 15th");
 		driver.findElement(By.xpath("//input[@id='returnCalendar']")).click();
-		waitFrDate.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='fare_20210215']"))).click();
+		waitFrDate.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class = 'calDate'][text()='15']"))).click();
 		dateDay = driver.findElement(By.xpath("//input[@id='returnCalendar']"));
 		dateDayValue = dateDay.getAttribute("value");
 		System.out.println(dateDayValue);
