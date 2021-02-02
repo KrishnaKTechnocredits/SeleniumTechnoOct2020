@@ -95,12 +95,12 @@ public class DatePicker {
 		String month = dateSplit[1];
 
 		System.out.println("Step 6: Validate today's date is pre-selected on the date picker");
+		
 		WebElement element = driver.findElement(
-				By.xpath("//div[@class = 'DayPicker-Body']/div[@class = 'DayPicker-Week']//div[contains(@aria-label,"
-						+ day + ")]"));
+				By.xpath("//div[@class = 'DayPicker-Body']//div[contains(@aria-label,'"+day+""+" "+""+year+"')]"));
 		String isSelected = element.getAttribute("aria-selected");
 
-		Assert.assertEquals("true", isSelected);
+		Assert.assertEquals(isSelected,"true");
 		if (isSelected.equals("true"))
 			System.out.println("Today's date is pre-selected");
 		else
