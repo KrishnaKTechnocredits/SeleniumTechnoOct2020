@@ -10,7 +10,7 @@ public class AlertDemo {
 	
 	static void start() {
 		String path = "./resources/windows/chromedriver.exe";
-		System.out.println("STEP - open chrome browser");
+		System.out.println("STEP - open chrome browser12345");
 		System.setProperty("webdriver.chrome.driver", path);
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
