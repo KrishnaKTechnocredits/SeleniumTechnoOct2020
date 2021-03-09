@@ -8,8 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import shrutiS.util.LaunchBrowser;
-
 
 public class EmployeeInDept {
 	static WebDriver driver;
@@ -35,7 +33,7 @@ public class EmployeeInDept {
 		}
 	}
 		public static void main(String[] arg) {
-			driver = LaunchBrowser.start();
+		//	driver = LaunchBrowser.start();
 			findDeptEmployee();
 			//driver.close();
 		}

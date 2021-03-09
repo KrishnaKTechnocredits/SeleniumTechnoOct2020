@@ -6,8 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import kajol.predefinedMethods.DriverMethods;
-
 public class VerifyAlert {
 	static WebDriver driver;
 	public static void verifyAlertMessage(String userName, String password,String expectedmsg) {
@@ -39,7 +37,7 @@ public class VerifyAlert {
 	
 	public static void main(String[] args) {
 		System.out.println("Opening Browser.");
-		driver=DriverMethods.start();
+		//driver=DriverMethods.start();
 		System.out.println("1. Click on  Registration ");
 		driver.findElement(By.xpath("//a[@id='registration2']")).click(); //driver.findElement(By.linkText("Registration")).click();
 		if (driver.findElement(By.xpath("//h1[@class='sign-title' and contains(text(),'Login')]")).isDisplayed()) {

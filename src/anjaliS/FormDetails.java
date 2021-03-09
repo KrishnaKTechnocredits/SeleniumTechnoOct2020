@@ -78,7 +78,7 @@ public class FormDetails {
 	}
 
 	public static void main(String[] args) {
-		driver = Driver.start();
+	//	driver = Driver.start();
 		FormDetails fd = new FormDetails();
 		fd.actionsOnForm();
 

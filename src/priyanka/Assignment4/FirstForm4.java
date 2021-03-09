@@ -29,17 +29,18 @@ e) Validate Reset functionality of form.
 */
 
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import priyanka.Driver;
 
 public class FirstForm4 {
 
 	public static void main(String[] args) {
-		WebDriver driver = Driver
-				.start("D:/Priyanka/Myeclipse_Java_Program/SeleniumTechnoOct2020/resources/forms/First_Form_4.html");
+		WebDriver driver = new ChromeDriver();
+		driver.get("D:/Priyanka/Myeclipse_Java_Program/SeleniumTechnoOct2020/resources/forms/First_Form_4.html");
 		try {
 			System.out.println("Program1: Revert selection of gender radio button");
 			WebElement element = driver.findElement(By.xpath("//input[@name='gender' and @value='male']"));
@@ -91,7 +92,7 @@ public class FirstForm4 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			Driver.quit(driver);
+			driver.quit();
 		}
 	}
 

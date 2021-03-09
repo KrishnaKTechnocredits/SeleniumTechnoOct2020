@@ -15,8 +15,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import shrutiS.util.LaunchBrowser;
-
 public class ActionClass {
 	static WebDriver driver;
 
@@ -73,7 +71,7 @@ public class ActionClass {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		driver = LaunchBrowser.start("https://demos.telerik.com/kendo-ui/dragdrop/index");
+		//driver = LaunchBrowser.start("https://demos.telerik.com/kendo-ui/dragdrop/index");
 		ActionClass action = new ActionClass();
 		action.performDragAndDrop("You did great!");
 		action.performDoubleClickAction();

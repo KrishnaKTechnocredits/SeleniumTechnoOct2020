@@ -5,15 +5,14 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import base.PredefinedActions;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class MissingLink {
 	public static int brokenLinks;
 	public static int validLinks;
 	
 	public static void main(String[] args) {
-		WebDriver driver = PredefinedActions.start();
+		WebDriver driver = new ChromeDriver();
 				
 		driver.navigate().to("C:\\Users\\User\\Desktop\\Suresh\\Learning\\Oct_selenium\\Resources\\MissingLink.html");
 		

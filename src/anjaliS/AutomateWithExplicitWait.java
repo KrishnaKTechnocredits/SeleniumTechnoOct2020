@@ -27,7 +27,7 @@ public class AutomateWithExplicitWait {
 	}
 
 	public static void main(String[] args) {
-		driver = Driver.start();
+		//driver = Driver.start();
 		AutomateWithExplicitWait wait = new AutomateWithExplicitWait();
 		wait.explicitWait1();
 

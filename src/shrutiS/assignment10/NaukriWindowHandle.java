@@ -4,8 +4,6 @@ import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 
-import shrutiS.base.LauchBrowser;
-
 public class NaukriWindowHandle {
 	static WebDriver driver;
 
@@ -31,7 +29,7 @@ public class NaukriWindowHandle {
 	}
 
 	public static void main(String[] args) {
-		driver = LauchBrowser.start("https://www.naukri.com/");
+		//driver = LauchBrowser.start("https://www.naukri.com/");
 		login(driver);
 	}
 }

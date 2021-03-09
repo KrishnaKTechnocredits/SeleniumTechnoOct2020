@@ -6,16 +6,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-
-import base.PredefinedActions;
  
 public class DragAndDropDemo {
 	static WebDriver driver;
 
 	public static void main(String[] args) {
 		
-		driver = PredefinedActions.start("https://demos.telerik.com/kendo-ui/dragdrop/index");
+		driver = new ChromeDriver();
+		driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
 		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
 		DragAndDropDemo dragandDropDemo = new DragAndDropDemo();
 		dragandDropDemo.dragAndDrop();

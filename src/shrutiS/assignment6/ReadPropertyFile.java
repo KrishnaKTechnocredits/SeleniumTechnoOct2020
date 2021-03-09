@@ -2,17 +2,12 @@ package shrutiS.assignment6;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
-import shrutiS.base.LauchBrowser;
 
 public class ReadPropertyFile {
 
@@ -76,7 +71,7 @@ public class ReadPropertyFile {
 	}
 
 	public static void main(String[] args) throws IOException {
-		driver = LauchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\First_Form_4.html");
+	//	driver = LauchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\First_Form_4.html");
 		readPropertyFile(driver);
 	}
 }

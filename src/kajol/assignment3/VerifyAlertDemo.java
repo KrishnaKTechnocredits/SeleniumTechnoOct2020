@@ -6,8 +6,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import kajol.predefinedMethods.DriverMethods;
-
 public class VerifyAlertDemo {
 	static WebDriver driver;
 	
@@ -31,7 +29,7 @@ public class VerifyAlertDemo {
 	
 	public static void main(String[] args) {
 		System.out.println("Opening Browser");
-		driver=DriverMethods.start();
+		//driver=DriverMethods.start();
 		System.out.println("Click on Basic Elements");
 		driver.findElement(By.xpath("//a[@id='basicelements']")).click();
 		verifyAlertDemoform("Kajol", "Chhabada", "Atos");

@@ -1,6 +1,5 @@
 package shrutiC.assignment4;
 
-import java.util.HashSet;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -8,10 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import com.graphbuilder.struc.LinkedList;
-import com.sun.xml.bind.v2.model.core.Element;
-
-import net.bytebuddy.dynamic.scaffold.MethodGraph.Linked;
 import shrutiC.StartWebDriver;
 
 public class FormDetails {

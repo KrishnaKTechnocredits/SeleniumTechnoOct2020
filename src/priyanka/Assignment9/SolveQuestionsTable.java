@@ -2,11 +2,12 @@ package priyanka.Assignment9;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import priyanka.Basic.PredefineAction;
 
 public class SolveQuestionsTable {
 
@@ -73,7 +74,8 @@ public class SolveQuestionsTable {
 	}
 
 	public static void main(String[] args) {
-		WebDriver driver = PredefineAction.start();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://automationbykrishna.com");
 		new SolveQuestionsTable().answers(driver);
 		String colName = "Last Name";
 		int index = new SolveQuestionsTable().colIndex(colName, driver);

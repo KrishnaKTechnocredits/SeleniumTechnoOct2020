@@ -2,7 +2,6 @@ package shrutiS.assignment12;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -10,8 +9,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import shrutiS.base.LauchBrowser;
 
 public class BrokenLink {
 	static WebDriver driver;
@@ -39,7 +36,7 @@ public class BrokenLink {
 	}
 
 	public static void main(String[] args) throws IOException {
-		driver = LauchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\Broken_Link_Form.html");
+		//driver = LauchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\Broken_Link_Form.html");
 		new BrokenLink().findBrokenLink();
 	}
 }

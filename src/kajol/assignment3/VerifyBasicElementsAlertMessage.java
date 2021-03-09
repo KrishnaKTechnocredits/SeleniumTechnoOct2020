@@ -12,8 +12,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import kajol.predefinedMethods.DriverMethods;
-
 public class VerifyBasicElementsAlertMessage {
 	
 	static WebDriver driver;
@@ -61,7 +59,7 @@ public class VerifyBasicElementsAlertMessage {
 	
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Opening Browser");
-		driver=DriverMethods.start();
+		//driver=DriverMethods.start();
 		System.out.println("Click on Basic Elements");
 		driver.findElement(By.xpath("//a[@id='basicelements']")).click();
 		Thread.sleep(2000);

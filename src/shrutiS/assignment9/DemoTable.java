@@ -7,9 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import shrutiS.base.LauchBrowser;
-import suvela.Assignment9.SolveQuestions;
-
 public class DemoTable {
 
 	static WebDriver driver;
@@ -78,7 +75,7 @@ public class DemoTable {
 	}
 
 	public static void main(String[] args) {
-		driver = LauchBrowser.start("http://automationbykrishna.com/");
+		//driver = LauchBrowser.start("http://automationbykrishna.com/");
 		new DemoTable().QuesAndAnswer(driver);
 		String colName = "Last Name";
 		int index = new DemoTable().getColIndex(colName, driver);

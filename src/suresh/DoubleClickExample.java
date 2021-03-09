@@ -7,14 +7,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-
-import base.PredefinedActions;
 
 public class DoubleClickExample {
 	public static void main(String[] args) {
 
-		WebDriver driver = PredefinedActions.start();
+		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("http://automationbykrishna.com/#");
 		driver.findElement(By.id("basicelements")).click();
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);

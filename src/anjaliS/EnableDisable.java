@@ -58,7 +58,7 @@ public class EnableDisable {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		driver = Driver.start();
+		//driver = Driver.start();
 		EnableDisable ed = new EnableDisable();
 		ed.isElementVisible();
 		ed.isEnableDisable();

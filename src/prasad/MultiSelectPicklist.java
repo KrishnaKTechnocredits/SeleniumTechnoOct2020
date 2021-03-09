@@ -11,8 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.sun.xml.bind.v2.schemagen.xmlschema.List;
-
 /*Assignment - 7 : Scroll & MultiSelect
 
 Step1 : Go to AutomationByKrishna.com

@@ -80,12 +80,12 @@ public class BrokerLink {
 	}
 
 	public static void main(String[] args) throws IOException, InterruptedException, AWTException {
-		driver = Driver.start();
+		//driver = Driver.start();
 		BrokerLink linkhandler = new BrokerLink();
 		linkhandler.isBrokenOrMissingLink();
 		driver.quit();
 		System.out.println("Broken link closed successfully");
-		driver = Driver.start();
+		//driver = Driver.start();
 		linkhandler.selectFile();
 		driver.quit();
 		System.out.println("Automationbykrishna website closed successfully");

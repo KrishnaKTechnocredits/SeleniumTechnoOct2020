@@ -10,8 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import shrutiS.base.LauchBrowser;
-
 public class MissingLink {
 	static WebDriver driver;
 	
@@ -29,7 +27,7 @@ public class MissingLink {
 	 }
 	
 	public static void main(String[] args) {
-		driver = LauchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\MissingLink.html");
+		//driver = LauchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\MissingLink.html");
 		new MissingLink().findMissingLink(driver);
 	}
 }

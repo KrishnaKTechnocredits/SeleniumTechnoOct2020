@@ -17,8 +17,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.sun.xml.bind.v2.schemagen.xmlschema.List;
-
 public class MissingLink {
 
 	public WebDriver start() {
