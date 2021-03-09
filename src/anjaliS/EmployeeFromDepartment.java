@@ -48,7 +48,7 @@ public class EmployeeFromDepartment {
 	}
 
 	public static void main(String[] args) {
-		driver = Driver.start();
+		//driver = Driver.start();
 		EmployeeFromDepartment ed = new EmployeeFromDepartment();
 		ed.employeeName();
 		driver.close();

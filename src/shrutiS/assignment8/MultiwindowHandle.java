@@ -7,8 +7,6 @@ package shrutiS.assignment8;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import shrutiS.base.LauchBrowser;
-
 public class MultiwindowHandle {
 	static WebDriver driver;
 
@@ -25,7 +23,7 @@ public class MultiwindowHandle {
 	}
 
 	public static void main(String[] args) {
-		driver = LauchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\Window_Handling_Form.html");
+		//driver = LauchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\Window_Handling_Form.html");
 		new MultiwindowHandle().windowHandling(driver);
 	}
 }

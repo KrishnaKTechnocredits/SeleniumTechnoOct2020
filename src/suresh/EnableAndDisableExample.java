@@ -15,16 +15,15 @@ Note : This will prove, getAttribute will work even though, element is disabled.
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import base.PredefinedActions;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class EnableAndDisableExample {
 	static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
 
-		driver = PredefinedActions
-				.start("file:///C:/Users/User/Desktop/Suresh/Learning/Oct_selenium/Resources/Enable_And_Disable_&_Display_&_Hide_Form.html");
+		driver = new ChromeDriver();
+				driver.get("file:///C:/Users/User/Desktop/Suresh/Learning/Oct_selenium/Resources/Enable_And_Disable_&_Display_&_Hide_Form.html");
 		driver.findElement(By.id("myText")).sendKeys("Test123");
 		
 		 WebElement data = driver.findElement(By.id("myText"));

@@ -27,7 +27,7 @@ public class DragDropAndHover {
 	}
 
 	public static void main(String[] args) {
-		driver = Driver.start();
+		//driver = Driver.start();
 		DragDropAndHover dd = new DragDropAndHover();
 		dd.dragDrop();
 	}

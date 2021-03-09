@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import shrutiS.util.LaunchBrowser;
-
 public class ExplicitWait {
 	static WebDriver driver ;
 
@@ -24,7 +22,7 @@ public class ExplicitWait {
 		}
 	}
 		public static void main(String[] args) {
-			driver = LaunchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\Enable_And_Disable_&_Display_&_Hide_Form.html");
+			//driver = LaunchBrowser.start("E:\\SeleniumOCT20\\SeleniumTechnoOct2020\\resources\\forms\\Enable_And_Disable_&_Display_&_Hide_Form.html");
 			ExplicitWait.clickableVisibleWait();
 		}
 }

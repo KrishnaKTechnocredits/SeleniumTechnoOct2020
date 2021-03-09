@@ -26,7 +26,7 @@ public class Hover {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		driver = Driver.start();
+		//driver = Driver.start();
 		Hover hoverHandler = new Hover();
 		hoverHandler.hover();
 

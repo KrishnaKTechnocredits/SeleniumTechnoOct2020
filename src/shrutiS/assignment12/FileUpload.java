@@ -13,8 +13,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import shrutiS.base.LauchBrowser;
-
 public class FileUpload {
 	static WebDriver driver;
 
@@ -41,7 +39,7 @@ public class FileUpload {
 	}
 
 	public static void main(String[] args) throws IOException, AWTException, InterruptedException {
-		driver = LauchBrowser.start("http://automationbykrishna.com/");
+		//driver = LauchBrowser.start("http://automationbykrishna.com/");
 		new FileUpload().fileUpload();
 	}
 }

@@ -2,17 +2,19 @@
 
 package kajol.codingExam1.webtable;
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import kajol.predefinedMethods.DriverMethods;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TableDataValidation {
 	static WebDriver driver;
 	void validateUsernameofEmployees() {
 		System.out.println("1.Launch http://automationbykrishna.com/ ");
 		System.out.println();
-		driver = DriverMethods.start();
+		driver = new ChromeDriver();
+		driver.get("http://automationbykrishna.com/");
 		System.out.println();
 		System.out.println("2.Click On Demo Tables:");
 		driver.findElement(By.linkText("Demo Tables")).click();

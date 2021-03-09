@@ -5,8 +5,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-
-import priyanka.Basic.PredefineAction;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 //Assignment : 10
 //1. Open Naukri.com website
@@ -35,7 +34,8 @@ public class MultiWindows {
 	}
 
 	public static void main(String[] args) {
-		WebDriver driver = PredefineAction.start("https://www.naukri.com/");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.naukri.com/");
 		new MultiWindows().closeOtherWindows(driver);
 
 	}

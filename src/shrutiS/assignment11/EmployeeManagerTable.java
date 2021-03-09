@@ -10,8 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import shrutiS.base.LauchBrowser;
-
 public class EmployeeManagerTable {
 	static WebDriver driver;
 
@@ -80,7 +78,7 @@ public class EmployeeManagerTable {
 	}
 
 	public static void main(String[] args) {
-		driver = LauchBrowser.start("http://automationbykrishna.com/");
+	//	driver = LauchBrowser.start("http://automationbykrishna.com/");
 		handleEmployeeTable(driver);
 		driver.close();
 	}

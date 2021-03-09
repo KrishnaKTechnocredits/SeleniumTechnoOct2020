@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import priyanka.Driver;
+import brijesh.base.Driver;
 
 /*
 a) if element visible -> gettext and print it and hide the element and make sure element is no more visible.

@@ -2,17 +2,14 @@ package suresh;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
-
-import base.PredefinedActions;
 
 public class propFileReadingForm {
 	static WebDriver driver;
@@ -25,7 +22,8 @@ public class propFileReadingForm {
 		String firstname = prop.getProperty("firstname");
 		// System.out.println(firstname);
 		String url = prop.getProperty("url");
-		driver = PredefinedActions.start(url);
+		driver = new ChromeDriver();
+		driver.get(url);
 
 		driver.findElement(By.xpath("//input[@id='first name']")).sendKeys(firstname);
 		driver.findElement(By.xpath("//input[@id='last name']")).sendKeys(prop.getProperty("lastname"));

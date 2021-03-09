@@ -29,7 +29,7 @@ public class DoubleClick {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		driver = Driver.start();
+		//driver = Driver.start();
 		DoubleClick dc = new DoubleClick();
 		dc.doubleClick();
 	}

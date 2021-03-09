@@ -69,8 +69,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import priyanka.Basic.PredefineAction;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Emp_Mng_Table {
 
@@ -182,7 +181,7 @@ public class Emp_Mng_Table {
 	}
 
 	public static void main(String[] args) {
-		WebDriver driver = PredefineAction.start();
+		WebDriver driver =	new ChromeDriver();
 		new Emp_Mng_Table().findAnswersQ1(driver);
 		new Emp_Mng_Table().findAnswersQ2(driver);
 		new Emp_Mng_Table().findAnswersQ3(driver);
