@@ -16,6 +16,7 @@ public class AlertDemo {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://www.automationbykrishna.com");
+		System.out.println("AAAA");
 	}
 	
 	
