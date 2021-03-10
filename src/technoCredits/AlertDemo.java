@@ -10,7 +10,7 @@ public class AlertDemo {
 	
 	static void start() {
 		String path = "./resources/windows/chromedriver.exe";
-		System.out.println("STEP - open chrome browser AAAA");
+		System.out.println("STEP - open chrome browser BBBB");
 		System.out.println("STEP - open chrome browser 11234");
 		System.setProperty("webdriver.chrome.driver", path);
 		driver = new ChromeDriver();
