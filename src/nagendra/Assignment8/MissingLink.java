@@ -38,6 +38,9 @@ public class MissingLink {
 		System.out.println("STEP - Close the driver");
 		driver.close();
 		System.out.println("STEP - Test Completed");
+		if(driver==null){
+			driver.quit();
+		}
 
 	}
 }
