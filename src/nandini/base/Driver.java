@@ -20,11 +20,12 @@ public class Driver {
 		return driver;
 	}
 	
-	public static void start() {
-		start("http://automationbykrishna.com/");
+	public static WebDriver start() {
+		return start("http://automationbykrishna.com/");
 	}
 	
 	public static void quit(WebDriver driver) {
 		driver.quit();
 	}
 }
+

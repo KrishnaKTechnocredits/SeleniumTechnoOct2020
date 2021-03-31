@@ -10,11 +10,13 @@ public class AlertDemo {
 	
 	static void start() {
 		String path = "./resources/windows/chromedriver.exe";
-		System.out.println("STEP - open chrome browser");
+		System.out.println("STEP - open chrome browser BBBB");
+		System.out.println("STEP - open chrome browser 11234");
 		System.setProperty("webdriver.chrome.driver", path);
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://www.automationbykrishna.com");
+		System.out.println("AAAA");
 	}
 	
 	
